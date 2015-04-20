@@ -1,0 +1,8 @@
+Project name: Yelp restaurant dish search
+Team Members: Tianzhi Chen, Michael Yu, Will Burstein, Lucy Hu
+Domain: restaurant search/ technology company
+Queries: different food recipe queries within a specific geographical location
+Corpus: Retrieve from the Yelp api.  Corpus will be restaurant information and reviews from various restaurants.
+Goals: to be able to find a restaurant in close proximity that has the dish the user is searching for.  We’d like to be able to add a feature to rank reviews by relevance and a also by how users respond in reviews to the restaurant(predictive modeling)
+
+
