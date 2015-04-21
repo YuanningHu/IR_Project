@@ -84,31 +84,6 @@
                         "useful": 0,
                         "cool": 0
                     },
-                    "user_id": "INnXF53-gU808Urqj2IINA",
-                    "review_id": "xKEYejh91tQm9IJ8PHKI8Q",
-                    "text": "so good!",
-                    "business_id": "u1Xq93R4LQ2VV2hK8MK5Wg",
-                    "stars": 5,
-                    "date": "2009-11-03",
-                    "type": "review"
-                },
-                "_score": 1.4317393,
-                "_index": "i_reviews",
-                "highlight": {
-                    "text": [
-                        "so <em>good</em>!"
-                    ]
-                },
-                "_id": "6330"
-            },
-            {
-                "_type": "review",
-                "_source": {
-                    "votes": {
-                        "funny": 0,
-                        "useful": 0,
-                        "cool": 0
-                    },
                     "user_id": "iLkwSLOHMiBoFBbaimtiIQ",
                     "review_id": "mORAYbNRwz-dZKdIPtFPeg",
                     "text": "good chicken.",
@@ -125,6 +100,31 @@
                     ]
                 },
                 "_id": "9156"
+            },
+            {
+                "_type": "review",
+                "_source": {
+                    "votes": {
+                        "funny": 0,
+                        "useful": 0,
+                        "cool": 0
+                    },
+                    "user_id": "INnXF53-gU808Urqj2IINA",
+                    "review_id": "xKEYejh91tQm9IJ8PHKI8Q",
+                    "text": "so good!",
+                    "business_id": "u1Xq93R4LQ2VV2hK8MK5Wg",
+                    "stars": 5,
+                    "date": "2009-11-03",
+                    "type": "review"
+                },
+                "_score": 1.4317393,
+                "_index": "i_reviews",
+                "highlight": {
+                    "text": [
+                        "so <em>good</em>!"
+                    ]
+                },
+                "_id": "6330"
             },
             {
                 "_type": "review",
@@ -231,25 +231,25 @@
                 "_source": {
                     "votes": {
                         "funny": 0,
-                        "useful": 1,
+                        "useful": 0,
                         "cool": 0
                     },
-                    "user_id": "FWs_GQ0rvjzXgJvQVbUqGA",
-                    "review_id": "PvDHgsnxQnT3NnOkWObJgA",
-                    "text": "Inexpensive but good!",
-                    "business_id": "850x37UqfYu034zO0iCKxw",
+                    "user_id": "Y3bB-7mCSvaNe7sI1L7F0Q",
+                    "review_id": "5v63Wd1K4ZUlSBCzAs3VTw",
+                    "text": "Good hearty traditional breakfasts.",
+                    "business_id": "PSBDb3fb9WIeLU4JMs63AA",
                     "stars": 4,
-                    "date": "2010-03-15",
+                    "date": "2012-03-29",
                     "type": "review"
                 },
                 "_score": 1.1453915,
                 "_index": "i_reviews",
                 "highlight": {
                     "text": [
-                        "Inexpensive but <em>good</em>!"
+                        "<em>Good</em> hearty traditional breakfasts."
                     ]
                 },
-                "_id": "4827"
+                "_id": "6936"
             }
         ],
         "total": 4474,
@@ -260,6 +260,6 @@
         "failed": 0,
         "total": 5
     },
-    "took": 3,
+    "took": 154,
     "timed_out": false
 }

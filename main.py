@@ -58,13 +58,14 @@ if __name__ == '__main__':
     es = Elasticsearch()
 
     print settings_body
-    es.indices.delete(index='i_reviews')
+    if es.indices.exists(index='i_reviews'):
+        es.indices.delete(index='i_reviews')
     es.indices.create(index='i_reviews', body = settings_body)
     # bulkload to the server
     bulkload_data('review', 'yelp_reviews_file.json')
     bulkload_data('users', 'yelp_users_file.json')
     bulkload_data('business', 'yelp_businesses_file.json')
-
+    print 'data bulk loaded'
 
     # TODO:
     # schema:
