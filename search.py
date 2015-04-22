@@ -47,22 +47,28 @@ def print_summary(rt, num = 10):
     # TODO: Now, we only get 10 results. we need to change the schema to get all results.(m)
     # rank the restaurants:
             # TODO: SORT BUSINESS BY raw counts from elasticsearch results (will)
+            
             # by the usefulness of the results.
             # TODO: add up the usefulness of all retrieved result reviews on a restaurant. (will)
+            
             # by ratings
             # TODO: average the ratings of all result reviews on a restaurant./ or ratings of the businesses (micheal)
+            
             # by distance
-    # fitlers:
+    # filters:
             # TODO: filter out reviews by usefulness: (lucy)
-                # usefulness = cool + funny + usefull
+                # usefulness = cool + funny + useful
             # TODO: filter out reviews by ratings: ( lucy )
     #Others:
             # TODO: weight the ratings by  5 / (average user rating): (average rating is available) (chen)
+            # if the rating is larger than the user's average rating, give the rating more weight to increase scores
+            # if the rating is less than the users's average rating, give the rating more weight to subtract scores
+            
             # TODO: give people who rate more often a little bit more weight (chen)
 
 
 
-            # TODO: noise tunnel to retrieve the correct word
+            # TODO: noise tunnel to retrieve the correct word # language fix model
             # TODO: rank restaurants by distance./ Optional
             # TODO: INTERFACE
 
