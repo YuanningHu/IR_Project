@@ -26,8 +26,8 @@ def q_mw(string, verbose = True):
     json.dump(rt, f, indent=4, separators=(',', ': '))
     f.close()
     if verbose:
-        #print_summary(rt)
-        print avg_user_rating(rt)
+        print_summary(rt)
+        #print avg_user_rating(rt)
     return rt
 
 def print_summary(rt, num = 10):
@@ -43,11 +43,12 @@ def print_summary(rt, num = 10):
                 print(j, i["highlight"][j])
             print('\n')
 
-__author__ = 'MichaelYu'
-
+__author__ = 'Michael Yu'
+#get the average rating for each business based on all reviews
+#currently returns dictionary of businesses and the rating information. --can be changed later--
 def avg_user_rating(rt):
-    total = 0
     reviews = {}
+    #sums up all the ratings
     for rev in rt["hits"]["hits"]:
         bus_id = rev['_source']['business_id']
         rating = rev['_source']['stars']
@@ -56,11 +57,11 @@ def avg_user_rating(rt):
         else:
             reviews[bus_id]['total_ratings'] += rating
             reviews[bus_id]['num_ratings'] += 1
-
+    #finds the average of the reviews
     for bus in reviews:
         reviews[bus]['avg_rating'] = reviews[bus]['total_ratings']/float(reviews[bus]['num_ratings'])
         print reviews[bus]
-    print len(reviews)
+    return reviews
 
     #TODO:
     # TODO: Now, we only get 10 results. we need to change the schema to get all results.(m)
