@@ -20,12 +20,14 @@ def q_mw(string, verbose = True):
                     }
                 }
             }
-    rt = es.search(index='i_reviews', body = search_body)
+    #add size field to choose max reviews to return. default is 10
+    rt = es.search(index='i_reviews', body = search_body, size = 100000)
     f = open('query_result.txt', 'w')
     json.dump(rt, f, indent=4, separators=(',', ': '))
     f.close()
     if verbose:
-        print_summary(rt)
+        #print_summary(rt)
+        print avg_user_rating(rt)
     return rt
 
 def print_summary(rt, num = 10):
@@ -41,7 +43,24 @@ def print_summary(rt, num = 10):
                 print(j, i["highlight"][j])
             print('\n')
 
+__author__ = 'MichaelYu'
 
+def avg_user_rating(rt):
+    total = 0
+    reviews = {}
+    for rev in rt["hits"]["hits"]:
+        bus_id = rev['_source']['business_id']
+        rating = rev['_source']['stars']
+        if not reviews.has_key(bus_id):
+            reviews[bus_id] = {'total_ratings': rating, 'num_ratings': 1}
+        else:
+            reviews[bus_id]['total_ratings'] += rating
+            reviews[bus_id]['num_ratings'] += 1
+
+    for bus in reviews:
+        reviews[bus]['avg_rating'] = reviews[bus]['total_ratings']/float(reviews[bus]['num_ratings'])
+        print reviews[bus]
+    print len(reviews)
 
     #TODO:
     # TODO: Now, we only get 10 results. we need to change the schema to get all results.(m)
