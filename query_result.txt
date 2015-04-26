@@ -17,39 +17,14 @@
                     "date": "2010-04-06",
                     "type": "review"
                 },
-                "_score": 1.6198281,
+                "_score": 1.8195747,
                 "_index": "i_reviews",
                 "highlight": {
                     "text": [
                         "<em>Good</em> lawyer, <em>good</em> dude"
                     ]
                 },
-                "_id": "2650"
-            },
-            {
-                "_type": "review",
-                "_source": {
-                    "votes": {
-                        "funny": 0,
-                        "useful": 0,
-                        "cool": 0
-                    },
-                    "user_id": "ybnJoXphDsVeg299y5A3hQ",
-                    "review_id": "4HtFM3BEhWPssEmxaKAaQA",
-                    "text": "Good brews, good steak",
-                    "business_id": "8sGKlCVtewMuA2RGyfatyg",
-                    "stars": 4,
-                    "date": "2012-01-22",
-                    "type": "review"
-                },
-                "_score": 1.5974293,
-                "_index": "i_reviews",
-                "highlight": {
-                    "text": [
-                        "<em>Good</em> brews, <em>good</em> steak"
-                    ]
-                },
-                "_id": "7404"
+                "_id": "18501"
             },
             {
                 "_type": "review",
@@ -67,14 +42,14 @@
                     "date": "2005-10-31",
                     "type": "review"
                 },
-                "_score": 1.5836192,
+                "_score": 1.8195747,
                 "_index": "i_reviews",
                 "highlight": {
                     "text": [
                         "<em>good</em> thai, <em>good</em> prices."
                     ]
                 },
-                "_id": "100"
+                "_id": "24755"
             },
             {
                 "_type": "review",
@@ -84,22 +59,72 @@
                         "useful": 0,
                         "cool": 0
                     },
-                    "user_id": "iLkwSLOHMiBoFBbaimtiIQ",
-                    "review_id": "mORAYbNRwz-dZKdIPtFPeg",
-                    "text": "good chicken.",
-                    "business_id": "bdteJqgoj0OaALhj9RFtmw",
-                    "stars": 3,
-                    "date": "2011-11-21",
+                    "user_id": "v8xNwMTKKybMx4bT3zF4OA",
+                    "review_id": "DptMxuQu4L5MMwdqCBwopQ",
+                    "text": "Good pub, good beers.",
+                    "business_id": "if5aZcWOPM0FDbG8SZ_D6A",
+                    "stars": 4,
+                    "date": "2011-02-03",
                     "type": "review"
                 },
-                "_score": 1.4317393,
+                "_score": 1.819215,
                 "_index": "i_reviews",
                 "highlight": {
                     "text": [
-                        "<em>good</em> chicken."
+                        "<em>Good</em> pub, <em>good</em> beers."
                     ]
                 },
-                "_id": "9156"
+                "_id": "22559"
+            },
+            {
+                "_type": "review",
+                "_source": {
+                    "votes": {
+                        "funny": 0,
+                        "useful": 0,
+                        "cool": 0
+                    },
+                    "user_id": "ybnJoXphDsVeg299y5A3hQ",
+                    "review_id": "4HtFM3BEhWPssEmxaKAaQA",
+                    "text": "Good brews, good steak",
+                    "business_id": "8sGKlCVtewMuA2RGyfatyg",
+                    "stars": 4,
+                    "date": "2012-01-22",
+                    "type": "review"
+                },
+                "_score": 1.8175429,
+                "_index": "i_reviews",
+                "highlight": {
+                    "text": [
+                        "<em>Good</em> brews, <em>good</em> steak"
+                    ]
+                },
+                "_id": "22037"
+            },
+            {
+                "_type": "review",
+                "_source": {
+                    "votes": {
+                        "funny": 0,
+                        "useful": 0,
+                        "cool": 0
+                    },
+                    "user_id": "oQrXehAY2392JGIpG1_DaQ",
+                    "review_id": "K1zc442fdRB_YtBi4rnU3g",
+                    "text": "Good haircut.  Good price.",
+                    "business_id": "ouk-OLREGfpv7owOg6b3tQ",
+                    "stars": 5,
+                    "date": "2011-11-09",
+                    "type": "review"
+                },
+                "_score": 1.8115801,
+                "_index": "i_reviews",
+                "highlight": {
+                    "text": [
+                        "<em>Good</em> haircut.  <em>Good</em> price."
+                    ]
+                },
+                "_id": "7129"
             },
             {
                 "_type": "review",
@@ -117,14 +142,39 @@
                     "date": "2009-11-03",
                     "type": "review"
                 },
-                "_score": 1.4317393,
+                "_score": 1.6158171,
                 "_index": "i_reviews",
                 "highlight": {
                     "text": [
                         "so <em>good</em>!"
                     ]
                 },
-                "_id": "6330"
+                "_id": "21269"
+            },
+            {
+                "_type": "review",
+                "_source": {
+                    "votes": {
+                        "funny": 0,
+                        "useful": 0,
+                        "cool": 0
+                    },
+                    "user_id": "ELde2mp5XwPR1ZEFYexFTA",
+                    "review_id": "HcHLnug_djEvi8i4UfmzTg",
+                    "text": "Not good.",
+                    "business_id": "ID07ERaiqMpl-S2tdQSXlA",
+                    "stars": 2,
+                    "date": "2012-09-07",
+                    "type": "review"
+                },
+                "_score": 1.6079742,
+                "_index": "i_reviews",
+                "highlight": {
+                    "text": [
+                        "Not <em>good</em>."
+                    ]
+                },
+                "_id": "22523"
             },
             {
                 "_type": "review",
@@ -142,39 +192,14 @@
                     "date": "2012-10-05",
                     "type": "review"
                 },
-                "_score": 1.4119413,
+                "_score": 1.6064961,
                 "_index": "i_reviews",
                 "highlight": {
                     "text": [
                         "<em>Good</em> Beer"
                     ]
                 },
-                "_id": "8863"
-            },
-            {
-                "_type": "review",
-                "_source": {
-                    "votes": {
-                        "funny": 0,
-                        "useful": 1,
-                        "cool": 1
-                    },
-                    "user_id": "E8lWsq6m_H_PnYvafYf9CA",
-                    "review_id": "phN6VIOO4wDSxTJLdXxINQ",
-                    "text": "Food: Good\r\nSelection: Good\r\nLocation: Good\r\nAmbience: Good\r\nPrice: Good\r\n= 5 stars\r\n\r\nRec: veggie samosa (spicy)",
-                    "business_id": "dETpJUa-Dz4DsavSH7a7Gg",
-                    "stars": 5,
-                    "date": "2006-08-13",
-                    "type": "review"
-                },
-                "_score": 1.2628788,
-                "_index": "i_reviews",
-                "highlight": {
-                    "text": [
-                        "Food: <em>Good</em>\r\nSelection: <em>Good</em>\r\nLocation: <em>Good</em>\r\nAmbience: <em>Good</em>\r\nPrice: <em>Good</em>\r\n= 5 stars\r\n\r\nRec: veggie samosa (spicy)"
-                    ]
-                },
-                "_id": "9424"
+                "_id": "31336"
             },
             {
                 "_type": "review",
@@ -184,22 +209,22 @@
                         "useful": 0,
                         "cool": 0
                     },
-                    "user_id": "48aPYAJ81-F4FKq0BrbEJQ",
-                    "review_id": "T2_EC6wmREidZ4bemcgacQ",
-                    "text": "Good pizza. Good price. Excellent condiments.",
-                    "business_id": "XqKhC29UQ1ya1Py3bTzvAA",
-                    "stars": 4,
-                    "date": "2010-11-02",
+                    "user_id": "iLkwSLOHMiBoFBbaimtiIQ",
+                    "review_id": "mORAYbNRwz-dZKdIPtFPeg",
+                    "text": "good chicken.",
+                    "business_id": "bdteJqgoj0OaALhj9RFtmw",
+                    "stars": 3,
+                    "date": "2011-11-21",
                     "type": "review"
                 },
-                "_score": 1.2046083,
+                "_score": 1.6012257,
                 "_index": "i_reviews",
                 "highlight": {
                     "text": [
-                        "<em>Good</em> pizza. <em>Good</em> price. Excellent condiments."
+                        "<em>good</em> chicken."
                     ]
                 },
-                "_id": "517"
+                "_id": "31563"
             },
             {
                 "_type": "review",
@@ -209,57 +234,32 @@
                         "useful": 0,
                         "cool": 0
                     },
-                    "user_id": "0mTjAMxeC_8wbYf9ja12jA",
-                    "review_id": "0Ikhu5_QsGqCWcxsx9rMNQ",
-                    "text": "Good Sushi, really good price for students.",
-                    "business_id": "2ciUQ05DREauhBC3xiA4qw",
-                    "stars": 5,
-                    "date": "2011-06-29",
+                    "user_id": "oIjfB_GmkfQTm4MsM6KjoA",
+                    "review_id": "84qGRkBnIqV0GqaNnhYxzA",
+                    "text": "Pretty good food. Good deal.",
+                    "business_id": "Hj1iNlNjj7jYRQ8mYD4Cpg",
+                    "stars": 3,
+                    "date": "2012-08-19",
                     "type": "review"
                 },
-                "_score": 1.1877145,
+                "_score": 1.5851326,
                 "_index": "i_reviews",
                 "highlight": {
                     "text": [
-                        "<em>Good</em> Sushi, really <em>good</em> price for students."
+                        "Pretty <em>good</em> food. <em>Good</em> deal."
                     ]
                 },
-                "_id": "4677"
-            },
-            {
-                "_type": "review",
-                "_source": {
-                    "votes": {
-                        "funny": 0,
-                        "useful": 0,
-                        "cool": 0
-                    },
-                    "user_id": "Y3bB-7mCSvaNe7sI1L7F0Q",
-                    "review_id": "5v63Wd1K4ZUlSBCzAs3VTw",
-                    "text": "Good hearty traditional breakfasts.",
-                    "business_id": "PSBDb3fb9WIeLU4JMs63AA",
-                    "stars": 4,
-                    "date": "2012-03-29",
-                    "type": "review"
-                },
-                "_score": 1.1453915,
-                "_index": "i_reviews",
-                "highlight": {
-                    "text": [
-                        "<em>Good</em> hearty traditional breakfasts."
-                    ]
-                },
-                "_id": "6936"
+                "_id": "20662"
             }
         ],
-        "total": 4474,
-        "max_score": 1.6198281
+        "total": 13544,
+        "max_score": 1.8195747
     },
     "_shards": {
         "successful": 5,
         "failed": 0,
         "total": 5
     },
-    "took": 154,
+    "took": 6,
     "timed_out": false
 }

@@ -1,5 +1,5 @@
 __author__ = 'tianzhichen'
-import json
+import json, copy
 from elasticsearch import Elasticsearch
 
 
@@ -25,7 +25,7 @@ def q_mw(string, verbose = True):
     json.dump(rt, f, indent=4, separators=(',', ': '))
     f.close()
     if verbose:
-        print_summary(rt)
+        print_summary(rt)    
     return rt
 
 def print_summary(rt, num = 10):
@@ -55,10 +55,39 @@ def print_summary(rt, num = 10):
             # TODO: average the ratings of all result reviews on a restaurant./ or ratings of the businesses (micheal)
             
             # by distance
-    # filters:
-            # TODO: filter out reviews by usefulness: (lucy)
-                # usefulness = cool + funny + useful
-            # TODO: filter out reviews by ratings: ( lucy )
+
+# filters:
+# TODO: filter out reviews by usefulness: (lucy)
+    # usefulness = cool + funny + useful
+def reviewFilter_votes(rt, lowerBorder = 0):
+    rtCopy = copy.deepcopy(rt)
+    newHits = []
+    for hit in rtCopy['hits']['hits']:
+        vote = hit['_source']['votes']
+        if vote['funny']+vote['useful']+vote['cool'] >= lowerBorder:
+            newHits.append(hit)
+    rtCopy['hits']['hits'] = newHits
+    
+    print 'Reviews Filtered by Votes Greater or Equal to', lowerBorder
+    print_summary(rtCopy) 
+    
+    return rtCopy
+                 
+
+# TODO: filter out reviews by ratings: ( lucy )
+def reviewFilter_stars(rt, lowerBorder = 0, upperBorder = 5):
+    rtCopy = copy.deepcopy(rt)
+    newHits = []
+    for hit in rtCopy['hits']['hits']:
+        if hit['_source']['stars'] >= lowerBorder and hit['_source']['stars'] <= upperBorder:
+            newHits.append(hit)
+    rtCopy['hits']['hits'] = newHits
+    
+    print 'Reviews Filtered by Business Stars from', lowerBorder, 'to', upperBorder
+    print_summary(rtCopy) 
+    
+    return rtCopy
+                
     #Others:
             # TODO: weight the ratings by  5 / (average user rating): (average rating is available) (chen)
             # if the rating is larger than the user's average rating, give the rating more weight to increase scores
@@ -73,7 +102,10 @@ def print_summary(rt, num = 10):
             # TODO: INTERFACE
 
 if __name__ == '__main__':
-    q_mw('good')
-
+    rt = q_mw('good')
+    print
+    reviewFilter_votes(rt, 1)
+    print
+    reviewFilter_stars(rt, 4, 5)
 
 

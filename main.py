@@ -53,7 +53,7 @@ def bulkload_data(type, json_filename,num = 100,):
     return list
 
 if __name__ == '__main__':
-    data_convert('small_yelp_dataset.json')
+    data_convert('biz_user_corrected_yelp_academic_dataset.json')
 
     es = Elasticsearch()
 
