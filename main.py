@@ -2,6 +2,7 @@ __author__ = 'tianzhichen'
 import json
 from elasticsearch import Elasticsearch
 from settings import settings_body
+import math
 
 class Review(object):
     def __init__(self,review_id):
@@ -21,10 +22,15 @@ def data_convert(jsonfilename = 'yelp_academic_dataset.json'):
         a = json.loads(line)
         if a['type'] == 'user':
             yelp_users_dict[a['user_id']] = a
+            a["frequency_user_boost"] = math.log(a["review_count"],2)
 
         if a['type'] == 'review':
+            # Chen: normalized the ratings
+            user_id = a['user_id']
+            ave_rating = yelp_users_dict[user_id]["average_stars"]
+            a["normalized_rating"] = a["stars"] * (5.0/ave_rating)
             yelp_reviews_dict[a['review_id']] = a
-
+            # print a
         if a['type'] == 'business':
             yelp_businesses_dict[a['business_id']] = a
     json.dump(yelp_users_dict, yelp_users_file)
@@ -34,12 +40,12 @@ def data_convert(jsonfilename = 'yelp_academic_dataset.json'):
     yelp_reviews_file.close()
     yelp_businesses_file.close()
 
-
-def bulkload_data(type, json_filename,num = 100,):
+def bulkload_data(type, json_filename,num = 1000):
 
     f = open(json_filename,'r')
     data_dict = json.load(f)
     list = []
+    l = len(data_dict)
     for id, novel in enumerate(data_dict.keys()):
         # put actions and data in the list
         action = {"create": {"_index": "i_reviews", "_type": type , "_id": str(id)}}
@@ -48,7 +54,9 @@ def bulkload_data(type, json_filename,num = 100,):
         list.append(data)
         # for every num files, bulk load them to server
         if id % num == 0 or id == (len(data_dict.keys())-1):
+            print id,'/', l, type
             es.bulk(list)
+
             list = []
     return list
 
@@ -58,14 +66,12 @@ if __name__ == '__main__':
     es = Elasticsearch()
 
     print settings_body
-    if es.indices.exists(index='i_reviews'):
-        es.indices.delete(index='i_reviews')
+    es.indices.delete(index='i_reviews')
     es.indices.create(index='i_reviews', body = settings_body)
     # bulkload to the server
     bulkload_data('review', 'yelp_reviews_file.json')
     bulkload_data('users', 'yelp_users_file.json')
     bulkload_data('business', 'yelp_businesses_file.json')
-    print 'data bulk loaded'
 
     # TODO:
     # schema:
