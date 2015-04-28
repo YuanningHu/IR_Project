@@ -27,7 +27,7 @@ def q_mw(string, verbose = True):
     f.close()
     if verbose:
         print_summary(rt)
-        #print avg_user_rating(rt)
+        print avg_user_rating(rt)
     return rt
 
 def print_summary(rt, num = 10):
