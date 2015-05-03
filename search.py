@@ -123,19 +123,20 @@ def reviewFilter_stars(rt, lowerBorder = 0, upperBorder = 5):
             newHits.append(hit)
     rtCopy['hits']['hits'] = newHits
     
+
    # print 'Reviews Filtered by Business Stars from', lowerBorder, 'to', upperBorder
   #  print_summary(rtCopy)
     
+
+    print 'Reviews Filtered by Business Stars from', lowerBorder, 'to', upperBorder
+    print_summary(rtCopy)
+
     return rtCopy
-                
     #Others:
             # TODO: weight the ratings by  5 / (average user rating): (average rating is available) (chen)
             # if the rating is larger than the user's average rating, give the rating more weight to increase scores
             # if the rating is less than the users's average rating, give the rating more weight to subtract scores
-            
             # TODO: give people who rate more often a little bit more weight (chen)
-
-
 
             # TODO: noise tunnel to retrieve the correct word # language fix model
             # TODO: rank restaurants by distance./ Optional

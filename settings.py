@@ -29,7 +29,9 @@ settings_body = {"settings": {
     "mappings": {
            "review": {
                "properties": {
-                   #TODO: ADD ANALYZERS HERE
+                   "text": {
+                       "type": "string",
+                       "analyzer": "review_analyzer"},
 
 
                }
