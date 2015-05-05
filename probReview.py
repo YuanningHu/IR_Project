@@ -29,7 +29,6 @@ def get_rev_Bus_Id(busId):
 def normalizeText(revObjTest):
     #get elastic search object for review Id
     tokenizedText = []
-    
     #iterate for all reviews corresponding to id
     for review in revObjTest['hits']['hits']:
         doc = review['_source']['text']
@@ -153,9 +152,12 @@ def get_top_3_rev_text(reviewObj, query):
 
 #test
 reviewObj = get_rev_Bus_Id('q-QYas8qfOvVas0If24pvg')
+print reviewObj['hits']['total']
+
 top3Revs = get_top_3_rev_text(reviewObj, "pizza student")
-#for rev in top3Revs:
-#    print rev
+
+for rev in top3Revs:
+   print rev
 
 
     

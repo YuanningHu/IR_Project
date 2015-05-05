@@ -175,7 +175,6 @@ def print_summary(rt, num = 100):
             # TODO: average the ratings of all result reviews on a restaurant.
             # by distance
             # TODO: rank restaurants by distance.
-
     # fitlers:
             # TODO: filter out reviews by usefulness:
                 # usefulness = cool + funny + usefull

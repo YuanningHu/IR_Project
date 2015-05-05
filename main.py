@@ -29,6 +29,7 @@ def data_convert(jsonfilename = 'yelp_academic_dataset.json'):
             user_id = a['user_id']
             ave_rating = yelp_users_dict[user_id]["average_stars"]
             a["normalized_rating"] = a["stars"] * (5.0/ave_rating)
+            a["usefulness"] = a["votes"]["cool"] + a["votes"]["funny"] + a["votes"]["useful"]
             yelp_reviews_dict[a['review_id']] = a
             # print a
         if a['type'] == 'business':
