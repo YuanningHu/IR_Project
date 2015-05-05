@@ -1,6 +1,8 @@
 __author__ = 'tianzhichen'
 import json, copy
 from elasticsearch import Elasticsearch
+import Tkinter
+
 
 
 es = Elasticsearch()
@@ -143,7 +145,7 @@ def reviewFilter_stars(rt, lowerBorder = 0, upperBorder = 5):
             # TODO: INTERFACE
 
 if __name__ == '__main__':
-    rt = q_mw('hot dog')
+    rt = q_mw('paella')
    ## print
   #  reviewFilter_votes(rt, 100)
   #  print
