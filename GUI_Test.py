@@ -1,52 +1,24 @@
 __author__ = 'Michael'
+#UI for dish search
+#uses Tkinter package to create the UI, interacts with the search
 from Tkinter import *
+import search
 
+#master frame
 master = Tk()
 
+#label prompt and entry box so that user can enter the query they are looking for
 Label(master,text="Enter your query below:").grid(row=0)
-query = Entry(master)
-query.grid(row=1,column=0)
+entry_query = Entry(master)
+entry_query.grid(row=1,column=0)
 
+#button event - takes query and feeds it into the search class, and puts it into a messagebox under the query
+def set_query_txt():
+    search.q_mw(entry_query.get())
+    Message(master,text=open('query_result.txt', 'r')).grid(row=2)
 
-btn_search = Button(master, text="Enter",command=).grid(row=1,column=1)
+#button to confirm that the entry text should be queried
+btn_search = Button(master, text="Enter",command=set_query_txt).grid(row=1,column=1)
 
-
-
-
-msg = Message(master,text="Results will go here").grid(row=2)
-
+#keep looping so that it's not just once instance of the program
 mainloop()
-x = StringVar()#use this to hold the final - make this the final result
-
-
-
-
-#class simpleapp_tk(Tkinter.Tk):
- #   def __init__(self,parent):
-  #      Tkinter.Tk.__init__(self,parent)
-   #     self.parent = parent
-    #    self.initialize()
-
-    #def initialize(self):
-       # self.grid()
-        #self.entry = Tkinter.Entry(self)
-        #self.entry.grid(column=0,row=0,sticky="EW")
-
-        #label = Tkinter.Label(self,text ="Ranking goes here")
-        #label.grid(column =0,row=1)
-
-        #button = Tkinter.Button(self,text=u"TEST")
-        #button.grid(column=1,row=0)
-
-        #self.grid_columnconfigure(0,weight=1)
-        #self.grid_rowconfigure(0,weight=1)
-
-
-
-
-
-
-if __name__ == "__main__":
-    app = simpleapp_tk(None)
-    app.title('my application')
-    app.mainloop()
